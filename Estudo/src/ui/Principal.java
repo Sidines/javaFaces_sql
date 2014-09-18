@@ -13,30 +13,28 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
 
 public class Principal extends JFrame {
 	
  
-	
+
+	private static final long serialVersionUID = 1L;
 	private static final JMenuBar MenuBar = new JMenuBar();
-	private javax.swing.JButton botton;
-	private javax.swing.JLabel label;
-	private javax.swing.JTextField textfiled;
-	private javax.swing.JTable jTableArrecadado;
+	 javax.swing.JButton botton;
+	 javax.swing.JLabel label;
+	 javax.swing.JTextField textfiled;
+	 javax.swing.JTable jTableArrecadado;
+	 JPanel panel;
 	
 	
 	
 	
 	public void componentes(){
 		
-		label = new JLabel("Tela de Testes!");
-		textfiled = new JTextField();
-		botton = new JButton("Salvar");	
-		
-		
-		JPanel panel = new JPanel();
+	 panel = new JPanel();
 		panel.setLayout(new GridBagLayout());
+		
+		label = new JLabel("Tela de Testes!");
 		
 		panel.add(label,
 				new GridBagConstraints(
@@ -46,12 +44,15 @@ public class Principal extends JFrame {
 				1,
 				0.0,
 				0.0,
-				GridBagConstraints.CENTER,
+				GridBagConstraints.WEST,
 				GridBagConstraints.HORIZONTAL,
 				new Insets(5, 10, 1, 1),
 				1,
 				1)
 				);
+		
+		textfiled = new JTextField();
+		
 		
 		panel.add(textfiled,
 				new GridBagConstraints(
@@ -61,13 +62,14 @@ public class Principal extends JFrame {
 				1,
 				0.0,
 				0.0,
-				GridBagConstraints.CENTER,
+				GridBagConstraints.WEST,
 				GridBagConstraints.HORIZONTAL,
 				new Insets(5, 10, 1, 1),
 				1,
 				1)
 				);
 		
+		botton = new JButton("Salvar");		
 		panel.add(botton,
 				new GridBagConstraints(
 				0,
@@ -76,12 +78,13 @@ public class Principal extends JFrame {
 				1,
 				0.0,
 				0.0,
-				GridBagConstraints.CENTER,
+				GridBagConstraints.WEST,
 				GridBagConstraints.HORIZONTAL,
 				new Insets(5, 10, 1, 1),
 				1,
 				1)
 				);
+		
 		this.add(panel);
 		
 		
@@ -143,8 +146,9 @@ public class Principal extends JFrame {
 	public Principal(){
 		
 		super("Tela Principal");
-		this.setLayout(null);
-		this.setBounds(0, 0, 800, 600);
+		//this.setLayout(null);
+		//this.setBounds(0, 0, 800, 600);
+		//this.setSize(500, 300);		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 			componentes();
